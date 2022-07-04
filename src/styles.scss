@@ -1,2 +1,124 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    background: #F5F7FE;
+}
+//Navbar
+.bg-c-header{
+    background-color: #303845;
+}
+
+.bg-c-menu{
+    background-color: #3c4557;
+}
+
+.p-menubar {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.p-menuitem-text{
+    color: rgb(150,155,169) !important;
+    font-weight:  bold;
+}
+
+
+//Footer
+.background-f{
+    background-color: #363D4D;
+    color: #fff
+}
+
+.icon-style-f{
+    color: rgb(150,155,169);
+    font-size: 1.9rem;
+    padding: 0.4em;
+}    
+
+.h6-footer-text {
+    font-size: 14px;
+    color: #C1C4C8!important;
+}
+
+.just-content-right{
+    display: flex;
+    justify-content: right;
+}
+
+.just-content-center{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 930px) {
+    .just-content-right{
+        display: flex;
+        justify-content: center;
+    }
+
+    .just-center-col{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    .img-f{
+        width: 164.525px;
+        height: 200px;
+    }
+}
+
+//Tablas
+.border-t{
+    border-top: 1px solid #DEE2E6;
+}
+
+.border-b{
+    border-bottom: 1px solid #DEE2E6;
+}
+
+.tabview-custom{
+    font-weight: 450 !important; 
+}
+ 
+.table {
+    margin-bottom: 0rem;
+}
+
+.background-router-o{
+    background-color: #F5F7FE !important;
+}
+  
+
+.p-tabview .p-tabview-nav {
+    background: #F5F7FE !important;
+    border: 1px solid #dee2e6;
+    border-width: 0 0 2px 0;
+}
+
+
+.p-tabview .p-tabview-panels  {
+    background: #F5F7FE;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    background: #F5F7FE;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background: #F5F7FE;
+} 
+
+
+.row {
+    --bs-gutter-x: 0rem;
+}
+
+
+

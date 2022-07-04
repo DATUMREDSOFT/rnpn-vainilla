@@ -1,0 +1,26 @@
+<div [ngStyle]="{'background': '#F5F7FE'}" >
+    <p-tabView  styleClass="tabview-custom">
+        <p-tabPanel  header="datosDUI">
+            <ng-template pTemplate = "header">
+                <i class="pi pi-user"></i>
+                <span class="ps-2">Datos de DUI</span>
+            </ng-template>
+            <app-datos-dui></app-datos-dui>
+        </p-tabPanel>
+        <p-tabPanel header="datosEmerg">
+            <ng-template pTemplate = "header">
+                <i class="pi pi-folder"></i>
+                <span class="ps-2">Datos del tramite</span>
+            </ng-template>
+            <app-datos-tramite></app-datos-tramite>
+        </p-tabPanel>
+        <p-tabPanel header="partidaNac">
+            <ng-template pTemplate = "header">
+                <i class="pi pi-file"></i>
+                <span class="ps-2">Partida Nac.</span>
+            </ng-template>
+            <app-partida-nac></app-partida-nac>
+        </p-tabPanel>
+    </p-tabView>
+</div>
+

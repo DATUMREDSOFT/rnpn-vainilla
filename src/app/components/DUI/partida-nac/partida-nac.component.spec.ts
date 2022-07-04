@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { PartidaNacComponent } from './partida-nac.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('PartidaNacComponent', () => {
+  let component: PartidaNacComponent;
+  let fixture: ComponentFixture<PartidaNacComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ PartidaNacComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(PartidaNacComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
