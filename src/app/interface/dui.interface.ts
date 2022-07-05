@@ -56,3 +56,15 @@ export interface DatosDuiResponse {
     canton:             null;
     caserio:            null;
 }
+
+export interface DatosTramiteResponse {
+    tipoTramite: string;
+    status:      string;
+    partMarc:    string;
+    folio:       string;
+    fechaReg:    string;
+    fechaEmi:    string;
+    fechaEntr:   string;
+    fechaVenc:   string;
+    centroServi: string;
+}
