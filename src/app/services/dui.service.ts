@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { DatosDuiResponse, DatosPartidaResponse } from '../interface/dui.interface';
+import { DatosDuiResponse, DatosPartidaResponse, DatosTramiteResponse } from '../interface/dui.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +29,12 @@ export class DuiService {
             console.log( 'Datos partida: '+ resp );
             this._datosPartida = resp;
       } )
+
+      this.http.get<DatosTramiteResponse>(urlDatosTramite)
+      .subscribe( (resp) => {
+          console.log( 'Datos tramite: '+ resp );
+          this._datosTramites = resp;
+    } )
   }
 
   get datodDui() {
