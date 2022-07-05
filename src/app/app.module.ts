@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ButtonModule}  from 'primeng/button';;
 import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -10,8 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageModule } from 'primeng/image';
 import { InputTextModule } from 'primeng/inputtext';
-import { SharedModule } from './shared/shared.module';
 import { TabViewModule } from 'primeng/tabview';
+import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { DatosDUIComponent } from './components/DUI/datos-dui/datos-dui.component';
@@ -35,6 +36,7 @@ import { DatosTramiteComponent } from './components/DUI/datos-tramite/datos-tram
     BreadcrumbModule,
     BrowserModule,
     BrowserAnimationsModule,
+    ButtonModule,
     CardModule,
     DividerModule,
     FontAwesomeModule,
@@ -42,8 +44,8 @@ import { DatosTramiteComponent } from './components/DUI/datos-tramite/datos-tram
     HttpClientModule,
     ImageModule,
     InputTextModule,
-    SharedModule,
-    TabViewModule
+    TabViewModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
