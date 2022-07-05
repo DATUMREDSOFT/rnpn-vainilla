@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DuiService } from 'src/app/services/dui.service';
 
 @Component({
   selector: 'app-datos-tramite',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatosTramiteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private duiService: DuiService) { }
 
   ngOnInit(): void {
   }

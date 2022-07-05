@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
+import { DuiService } from 'src/app/services/dui.service';
 
 @Component({
   selector: 'app-datos-dui',
@@ -8,14 +9,8 @@ import {MenuItem} from 'primeng/api';
 })
 export class DatosDUIComponent implements OnInit {
 
-  items: MenuItem[];
-
-  constructor() { 
-    this.items = [
-      {label:'Categories'},
-      {label:'Sports'},
-      {label:'Football'}
-    ];
+  constructor( private duiService: DuiService ) { 
+    
   }
 
   ngOnInit(): void {
