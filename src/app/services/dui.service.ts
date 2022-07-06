@@ -23,19 +23,19 @@ export class DuiService {
      this.http.get<DatosDuiResponse>(urlDatosDUI, {params:queryParams} )
         .subscribe( (resp ) => {
             console.log( 'Datos Dui' + resp );
-            this._datosDui = resp; 
+            //this._datosDui = resp; 
       } )
 
       this.http.get<DatosPartidaResponse>(urlDatosPartida, {params:queryParams} )
         .subscribe( (resp) => {
             console.log( 'Datos partida: '+ resp );
-            this._datosPartida = resp;
+            //this._datosPartida = resp;
       } )
 
       this.http.get<DatosTramiteResponse>(urlDatosTramite, {params:queryParams} )
       .subscribe( (resp) => {
           console.log( 'Datos tramite: '+ resp );
-          this._datosTramites = resp;
+          //this._datosTramites = resp;
     } )
   }
 
