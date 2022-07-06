@@ -88,10 +88,10 @@ export class DUIComponent implements OnInit {
   }
 
   handleClickDui(e: any){
+    
     this.datosDui = this.duiService.buscarDatosDui(this.dui);  
     this.datosTramite = this.duiService.buscarDatosTramite(this.dui);
     this.datosPartida = this.duiService.buscarDatosPartida(this.dui);
-
   }
 
   handleInput(e: any){
@@ -163,7 +163,11 @@ export class DUIComponent implements OnInit {
       "deptoNac": "",
       "muniNac": "",
       "cuadro": ""
-    } ;
+    };
+
+    this.duiService.limpiarDatoDui();
+    this.duiService.limpiarDatosTramite();
+    this.duiService.limpiarDatosPartida();
   }
 
 }
