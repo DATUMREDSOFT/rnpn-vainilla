@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { DatosDuiResponse, DatosPartidaResponse, DatosTramiteResponse } from '../interface/dui.interface';
 
@@ -18,19 +18,22 @@ export class DuiService {
     const urlDatosTramite:string = `https://service-datos-tramite-1-api-datos-personas.apps-crc.testing/api/datostramite?dui=${dui}`;
     const urlDatosPartida:string = `https://service-datos-partida-1-api-datos-personas.apps-crc.testing/api/datospartida?dui=${dui}`;
 
-     this.http.get<DatosDuiResponse>(urlDatosDUI )
+    let parameters = {"dui":"044021771"}
+    let queryParams = new HttpParams({ fromObject: parameters }); 
+
+     this.http.get<DatosDuiResponse>(urlDatosDUI, {params:queryParams} )
         .subscribe( (resp ) => {
             console.log( 'Datos Dui' + resp );
             this._datosDui = resp; 
       } )
 
-      this.http.get<DatosPartidaResponse>(urlDatosPartida)
+      this.http.get<DatosPartidaResponse>(urlDatosDUI, {params:queryParams} )
         .subscribe( (resp) => {
             console.log( 'Datos partida: '+ resp );
             this._datosPartida = resp;
       } )
 
-      this.http.get<DatosTramiteResponse>(urlDatosTramite)
+      this.http.get<DatosTramiteResponse>(urlDatosDUI, {params:queryParams} )
       .subscribe( (resp) => {
           console.log( 'Datos tramite: '+ resp );
           this._datosTramites = resp;
