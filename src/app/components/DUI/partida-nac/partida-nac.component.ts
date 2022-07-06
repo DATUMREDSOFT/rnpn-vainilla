@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DuiService } from 'src/app/services/dui.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { DatosPartidaResponse } from 'src/app/interface/dui.interface';
 
 @Component({
   selector: 'app-partida-nac',
@@ -8,9 +8,44 @@ import { DuiService } from 'src/app/services/dui.service';
 })
 export class PartidaNacComponent implements OnInit {
 
-  constructor(  private duiService: DuiService  ) { }
+  @Input() datosPartida?:DatosPartidaResponse = {
+      "dui":    "",
+      "noSoli": "",
+      "nom1":   "",
+      "nom2":   "",
+      "ape1":   "",
+      "ape2":   "",
+      "sexo": "",
+      "nomMadre": "",
+      "nomPadre": "",
+      "status": "",
+      "marginacion": "",
+      "rollo": "",
+      "rolloSec": null,
+      "anio": "",
+      "libro": "",
+      "folio": "",
+      "partida": "",
+      "deptoLibro": "",
+      "muniLibro": "",
+      "fecNac": "",
+      "deptoNac": "",
+      "muniNac": "",
+      "cuadro": ""
+  };
+
+  constructor(  ) { }
 
   ngOnInit(): void {
   }
 
 }
+
+
+
+
+
+
+
+
+

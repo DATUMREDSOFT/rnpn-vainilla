@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DuiService } from 'src/app/services/dui.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { DatosTramiteResponse } from 'src/app/interface/dui.interface';
 
 @Component({
   selector: 'app-datos-tramite',
@@ -8,7 +8,19 @@ import { DuiService } from 'src/app/services/dui.service';
 })
 export class DatosTramiteComponent implements OnInit {
 
-  constructor(private duiService: DuiService) { }
+  @Input() datosTramite?: DatosTramiteResponse = {
+    "tipoTramite": "",
+    "status": "",
+    "partMarc": "",
+    "folio": "",
+    "fechaReg": "",
+    "fechaEmi": "",
+    "fechaEntr": "",
+    "fechaVenc": "",
+    "centroServi": ""
+  };
+
+  constructor() { }
 
   ngOnInit(): void {
   }

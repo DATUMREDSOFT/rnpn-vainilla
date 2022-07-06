@@ -6,55 +6,48 @@
                     <tbody>
                       <tr class="border-t">
                           <th scope="col">DUI</th>
-                          <td scope="col">4010332</td>
+                          <td scope="col"> {{ datosPartida?.dui }}</td>
                         </tr>
                       <tr>
                           <th scope="col">No. Solicitud</th>
-                          <td scope="col">20419051</td>
+                          <td scope="col"> {{ datosPartida?.noSoli }}</td>
                       </tr>
                       <tr class="border-t">
                           <th scope="col">Nombres</th>
-                          <td scope="col">HECTOR ISAIAS</td>
+                          <td scope="col"> {{ datosPartida?.nom1 +' '+ datosPartida?.nom2}}</td>
                       </tr>
                       <tr>
                           <th scope="col">Apellidos</th>
-                          <td scope="col" >ARGUETA GUDIEL</td>
+                          <td scope="col"> {{ datosPartida?.ape1 +' '+   datosPartida?.ape2}}</td>
                       </tr>
                       <tr>
                           <th scope="col">Sexo</th>
-                          <td scope="col" >M</td>
+                          <td scope="col"> {{ datosPartida?.sexo }}</td>
                       </tr>
                       <tr class="border-t">
                           <th scope="col">Madre</th>
-                          <td scope="col">ANA SILVIA</td>
-                          <td scope="col">GUIDIEL</td>
+                          <td scope="col"> {{ datosPartida?.nomMadre }}</td>
                       </tr>
                       <tr>
                           <th scope="col">Padre</th>
-                          <td scope="col">HECTOR PORFIRIO</td>
-                          <td scope="col">ARGUETA TREJO</td>
+                          <td scope="col"> {{ datosPartida?.nomPadre }}</td>
                       </tr>
 
                       <tr class="border-t"> 
                           <th scope="col">Status</th>
-                          <td scope="col">V</td>
+                          <td scope="col"> {{ datosPartida?.status }}</td>
                         </tr>
                       <tr>
                           <th scope="col">Marginac.</th>
-                          <td scope="col">N</td>
+                          <td scope="col"> {{ datosPartida?.marginacion }}</td>
                       </tr>
-                    <tr>
-                        <th scope="col">Escaneada</th>
-                        <td scope="col">DOCUSAL</td>
-                    </tr>
-                    <tr class="border-t">
-                        <th scope="col">Rollo</th>
-                        <td scope="col">1</td>
-                    </tr>
-                    <tr class="border-b">
-                        <th scope="col">Rollo Sec.</th>
-                        <td scope="col">1</td>
-                    </tr>
+                      <tr class="border-t">
+                          <th scope="col">Rollo</th>
+                          <td scope="col"> {{ datosPartida?.rollo }}</td></tr>
+                      <tr class="border-b">
+                          <th scope="col">Rollo Sec.</th>
+                          <td scope="col"> {{ datosPartida?.rolloSec }}</td>
+                      </tr>
                     </tbody>
                 </table>
             </p-card>
@@ -67,59 +60,43 @@
                     <tbody>
                       <tr class="border-t">
                           <th scope="col">Año</th>
-                          <td scope="col">1988</td>
+                          <td scope="col"> {{ datosPartida?.anio }}</td>
                         </tr>
                       <tr>
                           <th scope="col">Libro</th>
-                          <td scope="col">8A</td>
+                          <td scope="col"> {{ datosPartida?.libro }}</td>
                       </tr>
                       <tr>
                           <th scope="col">Folio</th>
-                          <td scope="col">338</td>
+                          <td scope="col"> {{ datosPartida?.folio }}</td>
                       </tr>
                       <tr>
                           <th scope="col">Partida</th>
-                          <td scope="col">336</td>
+                          <td scope="col"> {{ datosPartida?.partida }}</td>
                       </tr>
                       <tr>
                            <th scope="col">Depto. Libro</th>
-                           <td scope="col">SAN SALVADOR</td>
+                           <td scope="col"> {{ datosPartida?.deptoLibro }}</td>
                       </tr>  
                       <tr>
                             <th scope="col">Munic. Libro</th>
-                            <td scope="col">SAN SALVADOR</td>
+                            <td scope="col"> {{ datosPartida?.muniLibro }}</td>
                       </tr>
                       <tr class="border-t">
                           <th scope="col">Fecha Nac.</th>
-                          <td scope="col">07/06/1988</td>
+                          <td scope="col"> {{ datosPartida?.fecNac }}</td>
                       </tr>
                       <tr>
                           <th scope="col">Depto. Nac.</th>
-                          <td scope="col">SAN SALVADOR</td>
+                          <td scope="col"> {{ datosPartida?.deptoNac }}</td>
                       </tr>
                       <tr>
-                        <th scope="col">Munic Nac.</th>
-                        <td scope="col">SAN SALVADOR</td>
-                    </tr>
-                      <tr class="border-t">
-                          <th scope="col">Cuadro</th>
-                          <td scope="col">5597730</td>
-                      </tr>
-                      <tr>
-                        <th scope="col">Imagen</th>
-                        <td scope="col">00559773031.TIF</td>
-                      </tr>
-                      <tr>
-                        <th scope="col">Síg. Imagen</th>
-                        <td scope="col">00559773022. TIF</td>
-                      </tr>
-                      <tr class="border-t ">
-                        <th scope="col">Fecha Carga</th>
-                        <td scope="col">14/11/2006</td>
+                          <th scope="col">Munic Nac.</th>
+                          <td scope="col"> {{ datosPartida?.muniNac }}</td>
                       </tr>
                       <tr class="border-b">
-                        <th scope="col">Fecha Capt.</th>
-                        <td scope="col">//</td>
+                          <th scope="col">Cuadro</th>
+                          <td scope="col"> {{ datosPartida?.cuadro }}</td>
                       </tr>
                     </tbody>
                 </table>

@@ -1,152 +1,137 @@
 <div class="background-router-o row"> 
-    <div class="col-12 col-md-2">
-        <p-image src="assets/images/p.jpeg" alt="Image" width="170"></p-image>
-    </div>
-    <div class="col-12 col-md-5">
+    <div class="col-12 col-md-6">
         <div class="col-12 col-md-12 pb-3 pe-3">
             <p-card [style]="{'width': '100%'}">
                 <table class="table table-borderless">
                     <tbody>
                       <tr class="border-t">
                           <th scope="col" >No. DUI</th>
-                          <td scope="col">04010332-7</td>
+                          <td scope="col">{{ datosDui?.dui }}</td>
                         </tr>
                       <tr>
                           <th scope="col">No. Solicitud</th>
-                          <td scope="col">20419051</td>
+                          <td scope="col">{{ datosDui?.numeroSolicitud }}</td>
                       </tr>
                       <tr>
                           <th scope="col">Nombre</th>
-                          <td scope="col" >HECTOR ISAIAS</td>
+                          <td scope="col">{{ datosDui?.nom1 + ' ' +  datosDui?.nom2  }}</td>
                       </tr>
                       <tr>
                           <th scope="col">Apellidos</th>
-                          <td scope="col" >ARGUETA GUDIEL</td>
+                          <td scope="col">{{ datosDui?.ape1 + ' ' + datosDui?.ape2 }}</td>
                       </tr>
                       <tr>
                           <th scope="col">Sexo</th>
-                          <td scope="col" >M</td>
+                          <td scope="col">{{ datosDui?.sexo }}</td>
                       </tr>
 
                       <tr class="border-t">
                         <th scope="col" >Est. Familiar</th>
-                        <td scope="col" >SOLTERO</td>
-                      </tr>
-                      <tr>
-                          <th scope="col">Sit. Familiar</th>
-                          <td scope="col" colspan="5"></td>
+                        <td scope="col">{{ datosDui?.estadoFami }}</td>
                       </tr>
                       <tr>
                           <th scope="col">Conyugue</th>
-                          <td scope="col" colspan="5"></td>
+                          <td scope="col">{{ datosDui?.conyugue }}</td>
                       </tr>
                       <tr>
                           <th scope="col">Madre</th>
-                          <td scope="col" colspan="5">ANA SILVIA GUIDIEL</td>
-                      </tr>
-                      <tr>
-                          <th scope="col">Padre</th>
-                          <td scope="col" colspan="5">HECTOR PORFIRIO ARGUETA TREJO</td>
-                      </tr>
-
-                      <tr class="border-t"> 
-                          <th scope="col" >Fecha Nac.</th>
-                          <td scope="col" colspan="5">07/06/1988</td>
+                          <td scope="col">{{ datosDui?.nombMadr }}</td>
                         </tr>
-                      <tr>
-                          <th scope="col">País Nac.</th>
-                          <td scope="col" colspan="5">EL SALVADOR</td>
-                      </tr>
-                    <tr>
-                        <th scope="col">Depto. Nac.</th>
-                        <td scope="col" colspan="5">SAN SALVADOR</td>
-                    </tr>
+                        <tr>
+                            <th scope="col">Padre</th>
+                            <td scope="col">{{ datosDui?.nombPadr }}</td>
+                        </tr>
+                        
+                        <tr class="border-t"> 
+                            <th scope="col" >Fecha Nac.</th>
+                            <td scope="col">{{ datosDui?.fechNaci }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">País Nac.</th>
+                            <td scope="col">{{ datosDui?.nombPaisNaci }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Depto. Nac.</th>
+                            <td scope="col">{{ datosDui?.nombDeptNaci }}</td>
+                        </tr>
                     <tr>
                         <th scope="col">Munic. Nac.</th>
-                        <td scope="col" colspan="5">SAN SALVADOR</td>
+                        <td scope="col">{{ datosDui?.nombMuniNaci }}</td>
                     </tr>
-                    <tr>
-                        <th scope="col">Salv. por</th>
-                        <td scope="col" colspan="5">NACIMIENTO</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">Nac. Ext</th>
-                      <td scope="col" colspan="5">N</td>
-                    </tr>
-
                     <tr class="border-t">
                         <th scope="col" >Estado Cdno.</th>
-                        <td scope="col" colspan="5">HABILITADO</td>
+                        <td scope="col">{{ datosDui?.estadoCiudadano }}</td>
                       </tr>
                     <tr>
                         <th scope="col">Prof. u Oficio</th>
-                        <td scope="col" colspan="5">ESTUDIANTE</td>
+                        <td scope="col">{{ datosDui?.profesion }}</td>
                     </tr>
                     <tr>
                         <th scope="col">Peso</th>
-                        <td scope="col" colspan="5">68</td>
+                        <td scope="col">{{ datosDui?.peso }}</td>
                     </tr>
                     <tr>
                         <th scope="col">Estatura</th>
-                        <td scope="col" colspan="5">176</td>
+                        <td scope="col">{{ datosDui?.estatura }}</td>
                     </tr>
                     <tr class="border-b">
                         <th scope="col">Conocido Por</th>
-                        <td scope="col" colspan="5">N</td>
+                        <td scope="col">{{ datosDui?.conocidoPor }}</td>
                     </tr>
-                    </tbody>
+                    </tbody>                   
                 </table>
             </p-card>
         </div>
     </div>
-    <div class="col-12 col-md-5">
+    <div class="col-12 col-md-6">
         <div class="col-12 col-md-12 pb-3 pe-3">
             <p-card [style]="{'width': '100%'}">
                 <table class="table table-borderless">
                     <thead>
                         <tr>
-                          <th scope="col">Residencia</th>
+                            <th scope="col">Residencia</th>
                         </tr>
-                      </thead>
+                    </thead>
                     <tbody>
-                      <tr class="border-t">
-                          <th scope="col">Residencia</th>
-                          <td scope="col">Calle PJE 20, POL K~2</td>
+                        <tr class="border-t">
+                            <th scope="col">Residencia</th>
+                            <td scope="col">{{ datosDui?.residencia }}</td>
                         </tr>
-                      <tr>
-                          <th scope="col">Casa</th>
-                          <td scope="col">CASA #5</td>
-                      </tr>
-                      <tr>
-                          <th scope="col">ZIP</th>
-                          <td scope="col">104010000T</td>
-                      </tr>
-                      <tr>
-                          <th scope="col">País</th>
-                          <td scope="col">EL SALVADOR</td>
+                        <tr class="border-b">
+                            <th scope="col">Calle</th>
+                            <td scope="col">{{ datosDui?.calle }}</td>
                         </tr>
                         <tr>
-                            <th scope="col">Depto.</th>
-                            <td scope="col">LA LIBERTAD</td>
+                            <th scope="col">Casa</th>
+                            <td scope="col">{{ datosDui?.casa }}</td>
                         </tr>
-                        
                         <tr>
-                            <th scope="col">Munic.</th>
-                            <td scope="col">SANTA TECLA</td>
-                      </tr>
-                      <tr>
-                          <th scope="col">Canton</th>
-                          <td scope="col">SIN CANTON</td>
-                      </tr>
-                      <tr>
-                          <th scope="col">Caseno</th>
-                          <td scope="col">SIN CASERIO</td>
-                      </tr>
-                      <tr class="border-b">
-                          <th scope="col">Tel. Part.</th>
-                          <td scope="col">22287589</td>
-                      </tr>
+                            <th scope="col">ZIP</th>
+                            <td scope="col">{{ datosDui?.zip }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">País</th>
+                            <td scope="col">{{ datosDui?.nombPaisResidencia }}</td>
+                          </tr>
+                          <tr>
+                              <th scope="col">Depto.</th>
+                              <td scope="col">{{ datosDui?.nombDeptResidencia }}</td>
+                          </tr>
+                          
+                          <tr>
+                              <th scope="col">Munic.</th>
+                              <td scope="col">{{ datosDui?.nombMuniResidencia }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Canton</th>
+                            <td scope="col">{{ datosDui?.canton }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Caseno</th>
+                            <td scope="col">{{ datosDui?.caserio }}</td>
+                        </tr>
                     </tbody>
+
                 </table>
             </p-card>
         </div>

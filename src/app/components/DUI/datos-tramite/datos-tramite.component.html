@@ -10,40 +10,39 @@
                 <tbody>
                   <tr class="border-t">
                       <th scope="col">Tipo Trámite</th>
-                      <td scope="col">RENOVACIÓN</td>
+                      <td scope="col"> {{datosTramite?.tipoTramite }}</td>
                     </tr>
                   <tr>
                       <th scope="col">Status</th>
-                      <td scope="col">DUI ENTREGADO</td>
+                      <td scope="col"> {{datosTramite?.status }}</td>
                   </tr>
                   <tr>
                       <th scope="col">Part. Marc.</th>
-                      <td scope="col">0</td>
+                      <td scope="col"> {{datosTramite?.partMarc }}</td>
                   </tr>
                   <tr>
                       <th scope="col">Folio</th>
-                      <td scope="col" >9036948</td>
-                    </tr>
-                    <tr>
-                        <th scope="col">Fecha Reg.</th>
-                        <td scope="col">04/12/2020</td>
-                    </tr>
-                    
+                      <td scope="col"> {{datosTramite?.folio }}</td>
+                  </tr>
+                  <tr>
+                       <th scope="col">Fecha Reg.</th>
+                       <td scope="col"> {{datosTramite?.fechaReg }}</td>
+                    </tr> 
                     <tr>
                         <th scope="col">Fecha Emi.</th>
-                        <td scope="col">04/12/2020</td>
+                        <td scope="col"> {{datosTramite?.fechaEmi }}</td>
                   </tr>
                   <tr>
                       <th scope="col">Fecha Entr.</th>
-                      <td scope="col">04/12/2020</td>
+                      <td scope="col"> {{datosTramite?.fechaEntr }} </td>
                   </tr>
                   <tr>
                       <th scope="col">Fecha Venc.</th>
-                      <td scope="col">03/12/2028</td>
+                      <td scope="col"> {{datosTramite?.fechaVenc }}</td>
                   </tr>
                   <tr class="border-t">
                       <th scope="col">Otro Serv.</th>
-                      <td scope="col">GALERIAS</td>
+                      <td scope="col"> {{datosTramite?.centroServi }}</td>
                   </tr>
                 </tbody>
             </table>

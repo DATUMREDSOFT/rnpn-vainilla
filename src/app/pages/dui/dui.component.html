@@ -1,29 +1,39 @@
-<div [ngStyle]="{'background': '#F5F7FE'}" >
-    <p-tabView  styleClass="tabview-custom">
-        <p-tabPanel  header="datosDUI">
-            <ng-template pTemplate = "header">
-                <i class="pi pi-user"></i>
-                <span class="ps-2">Datos de DUI</span>
-            </ng-template>
-            <app-datos-dui></app-datos-dui>
-        </p-tabPanel>
-        <p-tabPanel header="datosEmerg">
-            <ng-template pTemplate = "header">
-                <i class="pi pi-folder"></i>
-                <span class="ps-2">Datos del trámite</span>
-            </ng-template>
-            <app-datos-tramite></app-datos-tramite>
-        </p-tabPanel>
-        <p-tabPanel header="partidaNac">
-            <ng-template pTemplate = "header">
-                <i class="pi pi-file"></i>
-                <span class="ps-2">Partida Nac.</span>
-            </ng-template>
-            <app-partida-nac></app-partida-nac>
-        </p-tabPanel>
-    </p-tabView>
-        <p-button  [ngStyle]="{'padding': '50px'}" label="Datos DUI" (click)="handleClickDui($event)" ></p-button>
-        <p-button  [ngStyle]="{'padding': '50px'}" label="Datos Trámite" (click)="handleClickPartida($event)"></p-button>
-        <p-button  [ngStyle]="{'padding': '50px'}" label="Datos Partida" (click)="handleClickTramites($event)"></p-button>
+<div class="row">
+    <div class="col-12 col-md-12">
+        <div class="col-12 md:col-4">
+            <div class="p-inputgroup">
+                <input type="text" pInputText placeholder="Ingrese el DUI" [(ngModel)]="dui">   
+                <button type="button" pButton pRipple icon="pi pi-search" styleClass="p-button-warn" (click)="handleClickDui($event)"></button>      
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="row">   
+    <div class="col-12 col-md-12">
+        <div [ngStyle]="{'background': '#F5F7FE'}" >
+            <p-tabView  styleClass="tabview-custom">
+                <p-tabPanel  header="datosDUI" >
+                    <ng-template pTemplate = "header">
+                        <i class="pi pi-user"></i>
+                        <span class="ps-2">Datos de DUI</span>
+                    </ng-template>
+                    <app-datos-dui [datosDui]="datosDui" ></app-datos-dui>
+                </p-tabPanel>
+                <p-tabPanel header="datosEmerg">
+                    <ng-template pTemplate = "header">
+                        <i class="pi pi-folder"></i>
+                        <span class="ps-2">Datos del trámite</span>
+                    </ng-template>
+                    <app-datos-tramite [datosTramite]="datosTramite" ></app-datos-tramite>
+                </p-tabPanel>
+                <p-tabPanel header="partidaNac">
+                    <ng-template pTemplate = "header">
+                        <i class="pi pi-file"></i>
+                        <span class="ps-2">Partida Nac.</span>
+                    </ng-template>
+                    <app-partida-nac [datosPartida]="datosPartida"></app-partida-nac>
+                </p-tabPanel>
+            </p-tabView>
+        </div>
+    </div>
 </div>
-
