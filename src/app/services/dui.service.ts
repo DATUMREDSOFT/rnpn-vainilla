@@ -12,7 +12,7 @@ export class DuiService {
   private _datosPartida:any = {};
 
   constructor( private http: HttpClient) { 
-
+    
     console.log("Inicia el contructor");
     const dui = '044021771';
     const urlDatosDUI:string = `https://service-datos-dui-3-api-datos-personas.apps-crc.testing/api/datosdui?dui=${dui}`;
@@ -22,14 +22,20 @@ export class DuiService {
     this.http.get<DatosDuiResponse>(urlDatosDUI )
         .subscribe( resp  => {
             console.log('-------------');
-            console.log( 'Datos Dui con tipo de dato' + resp );
+            console.log( 'Datos Dui con tipo de dato');
+            console.log( resp );
+            console.log( JSON.stringify(resp, null, 4) );
+            console.log( JSON.stringify(resp) );
             console.log('-------------');
       } )
 
       this.http.get<DatosPartidaResponse>(urlDatosPartida)
         .subscribe( resp => {
             console.log('-------------');
-            console.log( 'Datos partida con tipo de dato: '+ resp );
+            console.log( 'Datos partida con tipo de dato: ');
+            console.log( resp );
+            console.log( JSON.stringify(resp, null, 4) );
+            console.log( JSON.stringify(resp) );;
             console.log('-------------');
 
       } )
@@ -37,7 +43,10 @@ export class DuiService {
       this.http.get<DatosTramiteResponse>(urlDatosTramite)
       .subscribe( resp => {
           console.log('-------------');
-          console.log( 'Datos tramite con tipo de dato: '+ resp );
+          console.log( 'Datos tramite con tipo de dato: ');
+          console.log( resp );
+          console.log( JSON.stringify(resp, null, 4) );
+          console.log( JSON.stringify(resp) );
           console.log('-------------');
       } )
 
@@ -45,14 +54,20 @@ export class DuiService {
       this.http.get(urlDatosDUI )
       .subscribe( resp  => {
           console.log('-------------');
-          console.log( 'Datos Dui sin tipo de dato' + resp );
+          console.log( 'Datos Dui sin tipo de dato');
+          console.log( resp );
+          console.log( JSON.stringify(resp, null, 4) );
+          console.log( JSON.stringify(resp) );
           console.log('-------------');
     } )
 
     this.http.get(urlDatosPartida)
       .subscribe( resp => {
           console.log('-------------');
-          console.log( 'Datos partida sin tipo de dato: '+ resp );
+          console.log( 'Datos partida sin tipo de dato: ');
+          console.log( resp );
+          console.log( JSON.stringify(resp, null, 4) );
+          console.log( JSON.stringify(resp) );
           console.log('-------------');
 
     } )
@@ -60,11 +75,16 @@ export class DuiService {
     this.http.get(urlDatosTramite)
     .subscribe( resp => {
         console.log('-------------');
-        console.log( 'Datos tramite sin  tipo de dato: '+ resp );
+        console.log( 'Datos tramite sin  tipo de dato: ');
+        console.log( resp );
+        console.log( JSON.stringify(resp, null, 4) );
+        console.log( JSON.stringify(resp) );
         console.log('-------------');
     } )
 
       console.log('Fin del constructor');
+
+      
   }
 
   get datodDui() {
