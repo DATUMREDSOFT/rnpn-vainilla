@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosDuiResponse, DatosPartidaResponse, DatosTramiteResponse } from 'src/app/interface/dui.interface';
+import { DataFirmaResponse, DataFotoResponse, DatosDuiResponse, DatosPartidaResponse, DatosTramiteResponse } from 'src/app/interface/dui.interface';
 import { DuiService } from 'src/app/services/dui.service';
 
 
@@ -79,6 +79,13 @@ export class DUIComponent implements OnInit {
     "cuadro": ""
   } ;
 
+  dataFoto: DataFotoResponse = {
+    photo: ''
+  }
+
+  dataFirma: DataFirmaResponse = {
+    signature: ''
+  }
   
 
   constructor( private duiService: DuiService) { 
@@ -91,6 +98,8 @@ export class DUIComponent implements OnInit {
     this.datosDui = this.duiService.buscarDatosDui(this.dui);  
     this.datosTramite = this.duiService.buscarDatosTramite(this.dui);
     this.datosPartida = this.duiService.buscarDatosPartida(this.dui);
+    this.dataFoto = this.duiService.buscarImgFoto(this.dui);
+    this.dataFirma = this.duiService.buscarImgFirma(this.dui);
   }
 
   handleInput(e: any){
@@ -167,6 +176,8 @@ export class DUIComponent implements OnInit {
     this.duiService.limpiarDatoDui();
     this.duiService.limpiarDatosTramite();
     this.duiService.limpiarDatosPartida();
+    this.duiService.limpiarDataFoto();
+    this.duiService.limpiarDataFirma();
   }
 
 }

@@ -1,10 +1,10 @@
 <div class="background-router-o row">
     <div class="col-12 col-md-2 text-center">
-        <div class="col-12 col-md-12 pb-3">
-            <p-image [src]="imgPerfil" alt="Image" width="105"></p-image>
+        <div class="col-12 col-md-12 pb-3" *ngIf="dataFoto.photo!==''">
+            <p-image [src]="dataFoto.photo" alt="Image" width="105"></p-image>
         </div>
-        <div class="col-12 col-md-12 pb-3">
-            <p-image [src]="imgFirma" alt="Image" width="105"></p-image>
+        <div class="col-12 col-md-12 pb-3"  *ngIf="dataFirma.signature!==''">
+            <p-image [src]="dataFirma.signature" alt="Image" width="105"></p-image>
         </div>
          <div class="col-12 col-md-12 pb-3">
             <button class="btn btn-primary btn-block" (click)="open(content)">Ver reporte</button>
@@ -81,11 +81,11 @@
                 </div>
 
                 <div class="col-12 col-md-2 text-center">
-                    <div class="col-12 col-md-12 pb-3">
-                        <p-image [src]="imgPerfil" alt="Image" width="105"></p-image>
+                    <div class="col-12 col-md-12 pb-3" *ngIf="dataFoto.photo!==''">
+                        <p-image [src]="dataFoto.photo" alt="Image" width="105"></p-image>
                     </div>
-                    <div class="col-12 col-md-12 pb-3">
-                        <p-image [src]="imgFirma" alt="Image" width="105"></p-image>
+                    <div class="col-12 col-md-12 pb-3" *ngIf="dataFirma.signature!==''">
+                        <p-image [src]="dataFirma.signature" alt="Image" width="105"></p-image>
                     </div>
                 </div> 
 

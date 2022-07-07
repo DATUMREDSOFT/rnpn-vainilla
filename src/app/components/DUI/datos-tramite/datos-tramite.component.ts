@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { DatosTramiteResponse } from 'src/app/interface/dui.interface';
+import { DataFirmaResponse, DataFotoResponse, DatosTramiteResponse } from 'src/app/interface/dui.interface';
 
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
@@ -27,8 +27,13 @@ export class DatosTramiteComponent implements OnInit {
 
   @Input() dui?: string = '';
 
-  @Input() imgPerfil:string = 'assets/images/p.jpeg';
-  @Input() imgFirma:string = 'assets/images/firma.png';
+  @Input() dataFoto:DataFotoResponse = {
+    photo: ''
+  }
+
+  @Input() dataFirma:DataFirmaResponse = {
+    signature: ''
+  }
 
   constructor( private modalService: NgbModal ) { }
 

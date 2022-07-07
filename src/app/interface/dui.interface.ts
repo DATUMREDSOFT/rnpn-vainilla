@@ -68,3 +68,12 @@ export interface DatosTramiteResponse {
     fechaVenc:   string;
     centroServi: string;
 }
+
+
+export interface DataFotoResponse {
+    photo: string;
+}
+
+export interface DataFirmaResponse {
+    signature: string;
+}

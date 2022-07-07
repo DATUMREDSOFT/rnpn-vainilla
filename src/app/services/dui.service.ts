@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { DatosDuiResponse, DatosPartidaResponse, DatosTramiteResponse } from '../interface/dui.interface';
+import { DataFirmaResponse, DataFotoResponse, DatosDuiResponse, DatosPartidaResponse, DatosTramiteResponse } from '../interface/dui.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -75,6 +75,14 @@ export class DuiService {
     "muniNac": "",
     "cuadro": ""
   } ;
+
+  private _imgPerfil: DataFotoResponse = {
+    photo: ''
+  }
+
+  private _imgFirma: DataFirmaResponse = {
+    signature: ''
+  }
 
   constructor( private http: HttpClient) { 
   } 
@@ -188,6 +196,21 @@ export class DuiService {
     return this._datosPartida;
   }
 
+  buscarImgFoto = (dui: string) => {
+    /*Peticion http*/
+    this._imgPerfil = {
+      photo: 'assets/images/p.jpeg'
+    }; 
+    return this._imgPerfil; 
+  }
+
+  buscarImgFirma = (dui: string) => {
+    /*Peticion http */
+    this._imgFirma = {
+      signature: 'assets/images/firma.png'
+    }
+    return this._imgFirma;
+  }
  
   limpiarDatoDui() {
     this._datosDui = {
@@ -266,7 +289,18 @@ export class DuiService {
     };
   }
 
+  limpiarDataFoto(){
+    this._imgPerfil= {
+      photo: ''
+    }  
+  }
 
-  
+  limpiarDataFirma(){
+    this._imgFirma = {
+      signature: ''
+    }
+  }
+
+ 
 
 }
