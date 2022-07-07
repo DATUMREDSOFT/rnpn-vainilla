@@ -88,7 +88,6 @@ export class DUIComponent implements OnInit {
   }
 
   handleClickDui(e: any){
-    
     this.datosDui = this.duiService.buscarDatosDui(this.dui);  
     this.datosTramite = this.duiService.buscarDatosTramite(this.dui);
     this.datosPartida = this.duiService.buscarDatosPartida(this.dui);

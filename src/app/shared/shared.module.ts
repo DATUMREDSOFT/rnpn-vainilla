@@ -7,12 +7,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {AvatarModule} from 'primeng/avatar';
 import {AvatarGroupModule} from 'primeng/avatargroup';
 import {MenubarModule} from 'primeng/menubar';
+import { ModalPruebaComponent } from './modal-prueba/modal-prueba.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ModalPruebaComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import {MenubarModule} from 'primeng/menubar';
   ],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ModalPruebaComponent
   ]
 })
 export class SharedModule { }

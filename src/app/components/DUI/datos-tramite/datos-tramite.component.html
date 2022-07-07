@@ -1,12 +1,22 @@
-<div class="background-router-o row"> 
-    <div class="col-12 col-md-12 pb-3 pe-3">
+<div class="background-router-o row">
+    <div class="col-12 col-md-2 text-center">
+        <div class="col-12 col-md-12 pb-3">
+            <p-image [src]="imgPerfil" alt="Image" width="105"></p-image>
+        </div>
+        <div class="col-12 col-md-12 pb-3">
+            <p-image [src]="imgFirma" alt="Image" width="105"></p-image>
+        </div>
+         <div class="col-12 col-md-12 pb-3">
+            <button class="btn btn-primary btn-block" (click)="open(content)">Ver reporte</button>
+         </div>
+    </div> 
+    <div class="col-12 col-md-10 pb-3 pe-3">
         <p-card [style]="{'width': '100%'}">
+            <div class="pb-2">
+                <h4><b>Datos del trámite</b></h4>
+                <h6>DUI: {{dui}}</h6>
+            </div>
             <table class="table table-borderless">
-                <thead>
-                    <tr>
-                      <th scope="col">Datos del trámite</th>
-                    </tr>
-                  </thead>
                 <tbody>
                   <tr class="border-t">
                       <th scope="col">Tipo Trámite</th>
@@ -50,3 +60,88 @@
     </div>
 </div>
 
+<!--Modal-->
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Reporte Datos del Trámite</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div id="htmlDataTramite">
+        <div class="modal-body">
+            <div class="row">      
+                <div class="col-12 pt-4 pb-2">
+                    <div class="text-center bg-c-header">
+                        <div class="col-auto">
+                            <img  class="center" src="assets/images/rnpn.png">
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-12 text-center">
+                    <h3>Reporte del Trámite</h3>
+                </div>
+
+                <div class="col-12 col-md-2 text-center">
+                    <div class="col-12 col-md-12 pb-3">
+                        <p-image [src]="imgPerfil" alt="Image" width="105"></p-image>
+                    </div>
+                    <div class="col-12 col-md-12 pb-3">
+                        <p-image [src]="imgFirma" alt="Image" width="105"></p-image>
+                    </div>
+                </div> 
+
+                <div class="col-12 col-md-10">
+                    <table class="table table-borderless">
+                        <tbody>
+                          <tr class="border-t">
+                              <th scope="col">DUI</th>
+                              <td scope="col"> {{dui }}</td>
+                          </tr>
+                          <tr>
+                            <th scope="col">Tipo Trámite</th>
+                            <td scope="col"> {{datosTramite?.tipoTramite }}</td>
+                        </tr>
+                          <tr>
+                              <th scope="col">Status</th>
+                              <td scope="col"> {{datosTramite?.status }}</td>
+                          </tr>
+                          <tr>
+                              <th scope="col">Part. Marc.</th>
+                              <td scope="col"> {{datosTramite?.partMarc }}</td>
+                          </tr>
+                          <tr>
+                              <th scope="col">Folio</th>
+                              <td scope="col"> {{datosTramite?.folio }}</td>
+                          </tr>
+                          <tr>
+                               <th scope="col">Fecha Reg.</th>
+                               <td scope="col"> {{datosTramite?.fechaReg }}</td>
+                            </tr> 
+                            <tr>
+                                <th scope="col">Fecha Emi.</th>
+                                <td scope="col"> {{datosTramite?.fechaEmi }}</td>
+                          </tr>
+                          <tr>
+                              <th scope="col">Fecha Entr.</th>
+                              <td scope="col"> {{datosTramite?.fechaEntr }} </td>
+                          </tr>
+                          <tr>
+                              <th scope="col">Fecha Venc.</th>
+                              <td scope="col"> {{datosTramite?.fechaVenc }}</td>
+                          </tr>
+                          <tr class="border-t">
+                              <th scope="col">Otro Serv.</th>
+                              <td scope="col"> {{datosTramite?.centroServi }}</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" ngbAutofocus class="btn btn-danger" (click)="modal.close('Ok click')">Salir</button>
+        <button class="btn btn-primary btn-block" (click)="openPDF()">Descargar Reporte</button>
+    </div>
+   
+</ng-template>
+  

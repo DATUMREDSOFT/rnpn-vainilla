@@ -1,5 +1,16 @@
 <div class="background-router-o row"> 
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-2 text-center">
+        <div class="col-12 col-md-12 pb-3">
+            <p-image [src]="imgPerfil" alt="Image" width="105"></p-image>
+        </div>
+        <div class="col-12 col-md-12 pb-3">
+            <p-image [src]="imgFirma" alt="Image" width="105"></p-image>
+        </div>
+         <div class="col-12 col-md-12 pb-3">
+            <button class="btn btn-primary btn-block" (click)="open(content)">Ver reporte</button>
+         </div>
+    </div>
+    <div class="col-12 col-md-5">
         <div class="col-12 col-md-12 pb-3 pe-3">
             <p-card [style]="{'width': '100%'}">
                 <table class="table table-borderless">
@@ -83,7 +94,7 @@
             </p-card>
         </div>
     </div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-5">
         <div class="col-12 col-md-12 pb-3 pe-3">
             <p-card [style]="{'width': '100%'}">
                 <table class="table table-borderless">
@@ -137,3 +148,176 @@
         </div>
     </div>
 </div>
+
+
+
+<!--Modal-->
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Reporte de Datos de DUI</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div id="htmlDataDui">
+        <div class="modal-body">
+            <div class="row">      
+                <div class="col-12 pt-4 pb-2">
+                    <div class="text-center bg-c-header">
+                        <div class="col-auto">
+                            <img  class="center" src="assets/images/rnpn.png">
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-12 text-center">
+                    <h3>Reporte de Datos de DUI</h3>
+                </div>
+
+                <div class="col-12 col-md-2 text-center">
+                    <div class="col-12 col-md-12 pb-3">
+                        <p-image [src]="imgPerfil" alt="Image" width="105"></p-image>
+                    </div>
+                    <div class="col-12 col-md-12 pb-3">
+                        <p-image [src]="imgFirma" alt="Image" width="105"></p-image>
+                    </div>
+                </div> 
+                <div class="col-12 col-md-5">
+                    <div class="col-12 col-md-12">
+                        <table class="table table-borderless">
+                            <tbody>
+                              <tr>
+                                  <th scope="col" >No. DUI</th>
+                                  <td scope="col">{{ datosDui?.dui }}</td>
+                                </tr>
+                              <tr>
+                                  <th scope="col">No. Solicitud</th>
+                                  <td scope="col">{{ datosDui?.numeroSolicitud }}</td>
+                              </tr>
+                              <tr>
+                                  <th scope="col">Nombre</th>
+                                  <td scope="col">{{ datosDui?.nom1 + ' ' +  datosDui?.nom2  }}</td>
+                              </tr>
+                              <tr>
+                                  <th scope="col">Apellidos</th>
+                                  <td scope="col">{{ datosDui?.ape1 + ' ' + datosDui?.ape2 }}</td>
+                              </tr>
+                              <tr>
+                                  <th scope="col">Sexo</th>
+                                  <td scope="col">{{ datosDui?.sexo }}</td>
+                              </tr>
+        
+                              <tr class="border-t">
+                                <th scope="col" >Est. Familiar</th>
+                                <td scope="col">{{ datosDui?.estadoFami }}</td>
+                              </tr>
+                              <tr>
+                                  <th scope="col">Conyugue</th>
+                                  <td scope="col">{{ datosDui?.conyugue }}</td>
+                              </tr>
+                              <tr>
+                                  <th scope="col">Madre</th>
+                                  <td scope="col">{{ datosDui?.nombMadr }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">Padre</th>
+                                    <td scope="col">{{ datosDui?.nombPadr }}</td>
+                                </tr>
+                                
+                                <tr class="border-t"> 
+                                    <th scope="col" >Fecha Nac.</th>
+                                    <td scope="col">{{ datosDui?.fechNaci }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">País Nac.</th>
+                                    <td scope="col">{{ datosDui?.nombPaisNaci }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">Depto. Nac.</th>
+                                    <td scope="col">{{ datosDui?.nombDeptNaci }}</td>
+                                </tr>
+                            <tr>
+                                <th scope="col">Munic. Nac.</th>
+                                <td scope="col">{{ datosDui?.nombMuniNaci }}</td>
+                            </tr>
+                            <tr class="border-t">
+                                <th scope="col" >Estado Cdno.</th>
+                                <td scope="col">{{ datosDui?.estadoCiudadano }}</td>
+                              </tr>
+                            <tr>
+                                <th scope="col">Prof. u Oficio</th>
+                                <td scope="col">{{ datosDui?.profesion }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Peso</th>
+                                <td scope="col">{{ datosDui?.peso }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Estatura</th>
+                                <td scope="col">{{ datosDui?.estatura }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Conocido Por</th>
+                                <td scope="col">{{ datosDui?.conocidoPor }}</td>
+                            </tr>
+                            </tbody>                   
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="col-12 col-md-12">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Residencia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t">
+                                    <th scope="col">Residencia</th>
+                                    <td scope="col">{{ datosDui?.residencia }}</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <th scope="col">Calle</th>
+                                    <td scope="col">{{ datosDui?.calle }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">Casa</th>
+                                    <td scope="col">{{ datosDui?.casa }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">ZIP</th>
+                                    <td scope="col">{{ datosDui?.zip }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">País</th>
+                                    <td scope="col">{{ datosDui?.nombPaisResidencia }}</td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="col">Depto.</th>
+                                      <td scope="col">{{ datosDui?.nombDeptResidencia }}</td>
+                                  </tr>
+                                  
+                                  <tr>
+                                      <th scope="col">Munic.</th>
+                                      <td scope="col">{{ datosDui?.nombMuniResidencia }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">Canton</th>
+                                    <td scope="col">{{ datosDui?.canton }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">Caseno</th>
+                                    <td scope="col">{{ datosDui?.caserio }}</td>
+                                </tr>
+                            </tbody>
+        
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" ngbAutofocus class="btn btn-danger" (click)="modal.close('Ok click')">Salir</button>
+        <button class="btn btn-primary btn-block" (click)="openPDF()">Descargar Reporte</button>
+    </div>
+</ng-template>
+  

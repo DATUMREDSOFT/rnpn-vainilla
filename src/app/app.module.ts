@@ -11,6 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageModule } from 'primeng/image';
 import { InputTextModule } from 'primeng/inputtext';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TabViewModule } from 'primeng/tabview';
 import { SharedModule } from './shared/shared.module';
 
@@ -41,6 +42,7 @@ import { DatosTramiteComponent } from './components/DUI/datos-tramite/datos-tram
     DividerModule,
     FontAwesomeModule,
     FormsModule,
+    NgbModule,
     HttpClientModule,
     ImageModule,
     InputTextModule,
