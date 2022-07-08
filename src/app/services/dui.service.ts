@@ -92,7 +92,7 @@ export class DuiService {
 
   buscarDatosDui =  (dui:string) => {
   
-    const urlDatosDUI:string = `https://service-datos-dui-3-api-datos-personas.apps-crc.testing/api/datosdui?dui=${dui.trim()}`;
+    const urlDatosDUI:string = `https://service-datos-dui-1-api-datos-personas.apps.uda01.rnpn.gob.sv/api/datosdui?dui=${dui.trim()}`;
     
     this.http.get<DatosDuiResponse>(urlDatosDUI )
       .subscribe( resp  => {
@@ -139,7 +139,7 @@ export class DuiService {
 
   buscarDatosTramite = (dui:string) => {
 
-    const urlDatosTramite:string = `https://service-datos-tramite-1-api-datos-personas.apps-crc.testing/api/datostramite?dui=${dui.trim()}`;
+    const urlDatosTramite:string = `https://service-datos-tramite-1-api-datos-personas.apps.uda01.rnpn.gob.sv/api/datostramite?dui=${dui.trim()}`;
     this.http.get<DatosTramiteResponse>(urlDatosTramite)
      .subscribe( resp => {
          this._datosTramites = resp;
@@ -163,7 +163,7 @@ export class DuiService {
 
   buscarDatosPartida = (dui:string) => {
   
-    const urlDatosPartida:string = `https://service-datos-partida-1-api-datos-personas.apps-crc.testing/api/datospartida?dui=${dui.trim()}`;
+    const urlDatosPartida:string = `https://service-datos-partida-1-api-datos-personas.apps.uda01.rnpn.gob.sv/api/datospartida?dui=${dui.trim()}`;
     this.http.get<DatosPartidaResponse>(urlDatosPartida)
       .subscribe( resp => {
           this._datosPartida = resp;
@@ -201,7 +201,7 @@ export class DuiService {
 
   buscarImgFoto = (dui: string) => {
     /*Peticion http*/
-    const urlDatosFoto:string = `https://service-images-dui-1-api-datos-personas.apps-crc.testing/api/imagesdui/photo?dui=${dui.trim()}`;
+    const urlDatosFoto:string = `https://service-images-dui-1-api-datos-personas.apps.uda01.rnpn.gob.sv/api/imagesdui/photo?dui=${dui.trim()}`;
     this.http.get<DataFotoResponse>(urlDatosFoto)
       .subscribe( resp => {
         let objectURL = 'data:image/jpeg;base64,' + resp.photo;
@@ -219,7 +219,7 @@ export class DuiService {
 
   buscarImgFirma = (dui: string) => {
     /*Peticion http */
-    const urlDatosFirma:string = `https://service-images-dui-1-api-datos-personas.apps-crc.testing/api/imagesdui/signature?dui=${dui.trim()}`;
+    const urlDatosFirma:string = `https://service-images-dui-1-api-datos-personas.apps.uda01.rnpn.gob.sv/api/imagesdui/signature?dui=${dui.trim()}`;
     this.http.get<DataFirmaResponse>(urlDatosFirma)
       .subscribe( resp => {
         let objectURL = 'data:image/jpeg;base64,' + resp.signature;
