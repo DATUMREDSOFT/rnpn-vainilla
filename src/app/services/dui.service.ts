@@ -1,11 +1,14 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { DataFirmaResponse, DataFotoResponse, DatosDuiResponse, DatosPartidaResponse, DatosTramiteResponse } from '../interface/dui.interface';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DuiService {
+  
 
   private _datosDui:DatosDuiResponse = {
     "dui": "",
@@ -84,7 +87,7 @@ export class DuiService {
     signature: ''
   }
 
-  constructor( private http: HttpClient) { 
+  constructor( private http: HttpClient, private sanitizer: DomSanitizer ) { 
   } 
 
   buscarDatosDui =  (dui:string) => {
@@ -201,7 +204,10 @@ export class DuiService {
     const urlDatosFoto:string = `https://service-images-dui-1-api-datos-personas.apps-crc.testing/api/imagesdui/photo?dui=${dui.trim()}`;
     this.http.get<DataFotoResponse>(urlDatosFoto)
       .subscribe( resp => {
-        this._imgPerfil = resp;
+        let objectURL = 'data:image/jpeg;base64,' + resp.photo;
+        this._imgPerfil = {
+          photo: this.sanitizer.bypassSecurityTrustUrl(objectURL)
+        };
       })
 
 
@@ -216,12 +222,21 @@ export class DuiService {
     const urlDatosFirma:string = `https://service-images-dui-1-api-datos-personas.apps-crc.testing/api/imagesdui/signature?dui=${dui.trim()}`;
     this.http.get<DataFirmaResponse>(urlDatosFirma)
       .subscribe( resp => {
-        this._imgFirma = resp;
+        let objectURL = 'data:image/jpeg;base64,' + resp.signature;
+        this._imgFirma = {
+          signature: this.sanitizer.bypassSecurityTrustUrl(objectURL)
+        }
       })
 
-    // this._imgFirma = {
-    //   signature: 'assets/images/firma.png'
+
+
+    // let objectURL = 'data:image/jpeg;base64,' + imgFirmas.signature;
+    // this._imgFirma= {
+    //   signature: this.sanitizer.bypassSecurityTrustUrl(objectURL)
     // }
+
+
+
     return this._imgFirma;
   }
  

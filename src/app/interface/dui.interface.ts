@@ -1,3 +1,5 @@
+import { SafeUrl } from "@angular/platform-browser";
+
 export interface DatosPartidaResponse {
     dui:         string;
     noSoli:      string;
@@ -71,9 +73,9 @@ export interface DatosTramiteResponse {
 
 
 export interface DataFotoResponse {
-    photo: string;
+    photo: SafeUrl;
 }
 
 export interface DataFirmaResponse {
-    signature: string;
+    signature: SafeUrl;
 }
