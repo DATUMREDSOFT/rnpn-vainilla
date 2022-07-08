@@ -88,7 +88,7 @@ export class DuiService {
   } 
 
   buscarDatosDui =  (dui:string) => {
-    /*
+  
     const urlDatosDUI:string = `https://service-datos-dui-3-api-datos-personas.apps-crc.testing/api/datosdui?dui=${dui.trim()}`;
     
     this.http.get<DatosDuiResponse>(urlDatosDUI )
@@ -96,119 +96,132 @@ export class DuiService {
           this._datosDui = resp; 
           console.log( JSON.stringify(this._datosDui, null, 4) );
       })
-    */
+    
 
-      this._datosDui = {
-        "dui": "044021771",
-        "numeroSolicitud": "12356",
-        "nom1": "RENE",
-        "nom2": "GUILLERMO",
-        "ape1": "ECHEVERRIA",
-        "ape2": "MIRANDA",
-        "sexo": "M",
-        "estadoFami": "1",
-        "conyugue": null,
-        "nombMadr": "MARIA MAGDALENA MIRANDA",
-        "nombPadr": "FRANCISCO ECHEVERRIA",
-        "fechNaci": "12/01/1991",
-        "nombPaisNaci": "EL SALVADOR",
-        "nombDeptNaci": "SAN SALVADOR",
-        "nombMuniNaci": "SAN SALVADOR",
-        "estadoCiudadano": "1",
-        "profesion": "ESTUDIANTE",
-        "peso": "70",
-        "estatura": "170",
-        "conocidoPor": null,
-        "residencia": "COL. JARDINES DE SELL-SUTT",
-        "calle": "Dyesa",
-        "casa": "15",
-        "zip": "1040100000T",
-        "nombPaisResidencia": "EL SALVADOR",
-        "nombDeptResidencia": "SAN SALVADOR",
-        "nombMuniResidencia": "ILOPANGO",
-        "canton": null,
-        "caserio": null
-      }
+      // this._datosDui = {
+      //   "dui": "044021771",
+      //   "numeroSolicitud": "12356",
+      //   "nom1": "RENE",
+      //   "nom2": "GUILLERMO",
+      //   "ape1": "ECHEVERRIA",
+      //   "ape2": "MIRANDA",
+      //   "sexo": "M",
+      //   "estadoFami": "1",
+      //   "conyugue": null,
+      //   "nombMadr": "MARIA MAGDALENA MIRANDA",
+      //   "nombPadr": "FRANCISCO ECHEVERRIA",
+      //   "fechNaci": "12/01/1991",
+      //   "nombPaisNaci": "EL SALVADOR",
+      //   "nombDeptNaci": "SAN SALVADOR",
+      //   "nombMuniNaci": "SAN SALVADOR",
+      //   "estadoCiudadano": "1",
+      //   "profesion": "ESTUDIANTE",
+      //   "peso": "70",
+      //   "estatura": "170",
+      //   "conocidoPor": null,
+      //   "residencia": "COL. JARDINES DE SELL-SUTT",
+      //   "calle": "Dyesa",
+      //   "casa": "15",
+      //   "zip": "1040100000T",
+      //   "nombPaisResidencia": "EL SALVADOR",
+      //   "nombDeptResidencia": "SAN SALVADOR",
+      //   "nombMuniResidencia": "ILOPANGO",
+      //   "canton": null,
+      //   "caserio": null
+      // }
 
     return this._datosDui;
     
   }
 
   buscarDatosTramite = (dui:string) => {
-    /*
+
     const urlDatosTramite:string = `https://service-datos-tramite-1-api-datos-personas.apps-crc.testing/api/datostramite?dui=${dui.trim()}`;
     this.http.get<DatosTramiteResponse>(urlDatosTramite)
      .subscribe( resp => {
          this._datosTramites = resp;
          console.log( JSON.stringify(this._datosTramites, null, 4) );
     })
-    */
 
-    this._datosTramites = {
-      "tipoTramite": "RENOVACION",
-      "status": "DUI ENTREGADO",
-      "partMarc": "0",
-      "folio": "905321",
-      "fechaReg": "04/12/2020",
-      "fechaEmi": "04/12/2020",
-      "fechaEntr": "04/12/2020",
-      "fechaVenc": "03/12/2028",
-      "centroServi": "GALERIAS"
-    }
+
+    // this._datosTramites = {
+    //   "tipoTramite": "RENOVACION",
+    //   "status": "DUI ENTREGADO",
+    //   "partMarc": "0",
+    //   "folio": "905321",
+    //   "fechaReg": "04/12/2020",
+    //   "fechaEmi": "04/12/2020",
+    //   "fechaEntr": "04/12/2020",
+    //   "fechaVenc": "03/12/2028",
+    //   "centroServi": "GALERIAS"
+    // }
     return this._datosTramites;
   }
 
   buscarDatosPartida = (dui:string) => {
-    /*
+  
     const urlDatosPartida:string = `https://service-datos-partida-1-api-datos-personas.apps-crc.testing/api/datospartida?dui=${dui.trim()}`;
     this.http.get<DatosPartidaResponse>(urlDatosPartida)
       .subscribe( resp => {
           this._datosPartida = resp;
           console.log( JSON.stringify(this._datosPartida, null, 4) )
       })
-    */
-      this._datosPartida = {
-        "dui": "044021771",
-        "noSoli": "223564",
-        "nom1": "RENE",
-        "nom2": "GUILLEMRO",
-        "ape1": "ECHEVERRIA",
-        "ape2": "MIRANDA",
-        "sexo": "M",
-        "nomMadre": "MARIA MAGDALENA MIRANDA",
-        "nomPadre": "FRANCISCO ECHEVERRIA",
-        "status": "V",
-        "marginacion": "N",
-        "rollo": "1",
-        "rolloSec": null,
-        "anio": "1991",
-        "libro": "8A",
-        "folio": "338",
-        "partida": "336",
-        "deptoLibro": "SAN SALVADOR",
-        "muniLibro": "SAN SALVADOR",
-        "fecNac": "12/01/1991",
-        "deptoNac": "SAN SALVADOR",
-        "muniNac": "SAN SALVADOR",
-        "cuadro": "5569842"
-    }
+  
+    //   this._datosPartida = {
+    //     "dui": "044021771",
+    //     "noSoli": "223564",
+    //     "nom1": "RENE",
+    //     "nom2": "GUILLEMRO",
+    //     "ape1": "ECHEVERRIA",
+    //     "ape2": "MIRANDA",
+    //     "sexo": "M",
+    //     "nomMadre": "MARIA MAGDALENA MIRANDA",
+    //     "nomPadre": "FRANCISCO ECHEVERRIA",
+    //     "status": "V",
+    //     "marginacion": "N",
+    //     "rollo": "1",
+    //     "rolloSec": null,
+    //     "anio": "1991",
+    //     "libro": "8A",
+    //     "folio": "338",
+    //     "partida": "336",
+    //     "deptoLibro": "SAN SALVADOR",
+    //     "muniLibro": "SAN SALVADOR",
+    //     "fecNac": "12/01/1991",
+    //     "deptoNac": "SAN SALVADOR",
+    //     "muniNac": "SAN SALVADOR",
+    //     "cuadro": "5569842"
+    // }
     
     return this._datosPartida;
   }
 
   buscarImgFoto = (dui: string) => {
     /*Peticion http*/
-    this._imgPerfil = {
-      photo: 'assets/images/p.jpeg'
-    }; 
+    const urlDatosFoto:string = `https://service-images-dui-1-api-datos-personas.apps-crc.testing/api/imagesdui/photo?dui=${dui.trim()}`;
+    this.http.get<DataFotoResponse>(urlDatosFoto)
+      .subscribe( resp => {
+        this._imgPerfil = resp;
+      })
+
+
+    // this._imgPerfil = {
+    //   photo: 'assets/images/p.jpeg'
+    // }; 
     return this._imgPerfil; 
   }
 
   buscarImgFirma = (dui: string) => {
     /*Peticion http */
-    this._imgFirma = {
-      signature: 'assets/images/firma.png'
-    }
+    const urlDatosFirma:string = `https://service-images-dui-1-api-datos-personas.apps-crc.testing/api/imagesdui/signature?dui=${dui.trim()}`;
+    this.http.get<DataFirmaResponse>(urlDatosFirma)
+      .subscribe( resp => {
+        this._imgFirma = resp;
+      })
+
+    // this._imgFirma = {
+    //   signature: 'assets/images/firma.png'
+    // }
     return this._imgFirma;
   }
  
