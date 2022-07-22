@@ -23,6 +23,11 @@ export class NavbarComponent implements OnInit {
           label:'DUI',
           icon:'pi pi-fw pi-align-justify',
           routerLink: ['/DUI']
+      },
+      {
+          label:'Mantenimientos',
+          icon:'pi pi-fw pi-cog',
+          routerLink: ['/profesion-oficio']
       }
     ];
   }

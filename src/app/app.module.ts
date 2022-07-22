@@ -21,6 +21,10 @@ import { DUIComponent } from './pages/dui/dui.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { PartidaNacComponent } from './components/DUI/partida-nac/partida-nac.component';
 import { DatosTramiteComponent } from './components/DUI/datos-tramite/datos-tramite.component';
+import { ProfesionOficioComponent } from './pages/profesion-oficio/profesion-oficio.component';
+import { ProfesionOficioApiService } from './services/profesion-oficio-api.service';
+import {SliderModule} from 'primeng/slider';
+import {TableModule} from 'primeng/table';
 
 
 @NgModule({
@@ -30,7 +34,8 @@ import { DatosTramiteComponent } from './components/DUI/datos-tramite/datos-tram
     DatosTramiteComponent,
     DUIComponent,
     NotFoundComponent,
-    PartidaNacComponent
+    PartidaNacComponent,
+    ProfesionOficioComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -47,9 +52,13 @@ import { DatosTramiteComponent } from './components/DUI/datos-tramite/datos-tram
     ImageModule,
     InputTextModule,
     TabViewModule,
-    SharedModule
+    SharedModule,
+    SliderModule,
+    TableModule,
   ],
-  providers: [],
+  providers: [
+    ProfesionOficioApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

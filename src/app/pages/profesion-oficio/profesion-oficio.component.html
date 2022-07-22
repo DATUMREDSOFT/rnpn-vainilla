@@ -1,0 +1,56 @@
+<main class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Profesion / Oficio</h2>
+        </div>
+        <div class="col-md-12">
+
+        </div>
+
+        <div class="col-md-12 mb-5">
+            <p-table #dt [value]="listaProfesionesOficio">
+                <ng-template pTemplate="caption">
+                    <div class="table-header">
+                        <p>
+                            <br>
+                            <button type="button" class="btn btn-secondary mb-4">Agregar</button>
+
+
+                        </p>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="p-input-icon-left">
+                                    <i class="pi pi-search"></i>
+                                    <input pInputText type="text" placeholder="Global Search" />
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="right">
+
+                        </p>
+
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Descripcion</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-car>
+                    <tr>
+                        <td>{{car.codProf}}</td>
+                        <td>{{car.descProf}}</td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage">
+                    <tr>
+                        <td colspan="8">No customers found.</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</main>

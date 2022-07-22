@@ -1,0 +1,12 @@
+{
+    "lstCatProfOficio": [
+        {
+            "codProf": 2,
+            "descProf": "REGISTRO 2"
+        },
+        {
+            "codProf": 1,
+            "descProf": "Registro 1"
+        }
+    ]
+}
